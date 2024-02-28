@@ -29,14 +29,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	.largertext{
 			font-size: 20px;
 		}
+		.custom-button button {
+		width: 200px; /* Adjust width as needed */
+		height: 50px; /* Adjust height as needed */
+		border-radius: 20px; /* Adjust border radius for more curved borders */
+		background-color: #fff; /* Set initial background color */
+    	transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+.custom-button button:hover {
+    background-color: #000; /* Change background color to black on hover */
+    
+}
+
 </style>
 </head>
 <body>
 <div class="header" id="head">	
       <div class="container"> 
          <div class="header-top">
-      		 <div class="logo" style="border-radius: 10px;">
-				<a href="" download>Download my CV</a>
+      		 <div class="logo">
+				<a href="" download class="custom-button"><button>Download my CV</button></a>
+
 			 </div>
 		   <div class="top-menu">
 		   	<span class="menu"> </span>
