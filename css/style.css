@@ -1,4 +1,62 @@
 /* Reset and Base Styles */
+/* Viewport Fix for Mobile Browsers */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px; /* Minimum mobile width */
+}
+
+/* Force mobile layout */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px !important;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem !important;
+  }
+
+  .hero-description {
+    font-size: 1rem !important;
+  }
+
+  .section-title {
+    font-size: 2rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  .section-title {
+    font-size: 1.8rem !important;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +104,16 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile container fix */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+    max-width: 100%;
+  }
 }
 
 .text-gradient {
@@ -1052,11 +1120,13 @@ section {
     top: 70px;
     flex-direction: column;
     background-color: white;
-    width: 100%;
+    width: 100vw !important; /* Force full viewport width */
+    height: calc(100vh - 70px);
     text-align: center;
     transition: 0.3s;
     box-shadow: var(--shadow-lg);
     padding: 20px 0;
+    z-index: 999;
   }
 
   .nav-menu.active {
@@ -1218,5 +1288,31 @@ section {
 
   .contact-form {
     padding: 25px;
+  }
+}
+/* Touch-friendly sizing */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 48px; /* Minimum touch target */
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+
+  .nav-link {
+    padding: 15px 0;
+    font-size: 18px;
+  }
+
+  .social-link {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  /* Prevent zoom on input focus */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
   }
 }
