@@ -118,65 +118,6 @@ function initSkillBars() {
   animateSkillBars(); // Call once on load
 }
 
-// Contact form functionality
-// function initContactForm() {
-//   const contactForm = document.getElementById("contact-form");
-
-//   if (contactForm) {
-//     contactForm.addEventListener("submit", function (e) {
-//       e.preventDefault();
-
-//       // Get form data
-//       const formData = new FormData(contactForm);
-//       const name = formData.get("name");
-//       const email = formData.get("email");
-//       const subject = formData.get("subject");
-//       const message = formData.get("message");
-
-//       // Simple validation
-//       if (!name || !email || !subject || !message) {
-//         showNotification("Please fill in all fields.", "error");
-//         return;
-//       }
-
-//       if (!isValidEmail(email)) {
-//         showNotification("Please enter a valid email address.", "error");
-//         return;
-//       }
-
-//       // Simulate form submission
-//       const submitButton = contactForm.querySelector('button[type="submit"]');
-//       const originalText = submitButton.textContent;
-
-//       submitButton.textContent = "Sending...";
-//       submitButton.disabled = true;
-
-//       // Simulate API call
-//       // Since this is a static site, redirect to email
-//       setTimeout(() => {
-//         const formData = new FormData(contactForm);
-//         const name = formData.get("name");
-//         const email = formData.get("email");
-//         const subject = formData.get("subject");
-//         const message = formData.get("message");
-
-//         // Create email body
-//         const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0ASubject: ${subject}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-
-//         // Open user's email client
-//         window.location.href = `mailto:ashrafanil434@gmail.com?subject=Portfolio Contact: ${subject}&body=${emailBody}`;
-
-//         showNotification(
-//           "Your email client will open to send the message. Alternatively, you can email me directly at ashrafanil434@gmail.com",
-//           "success"
-//         );
-//         contactForm.reset();
-//         submitButton.textContent = originalText;
-//         submitButton.disabled = false;
-//       }, 1000);
-//     });
-//   }
-// }
 // Contact form functionality with Formspree
 function initContactForm() {
   const contactForm = document.getElementById("contact-form");
