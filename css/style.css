@@ -1082,6 +1082,12 @@ section {
   .nav-toggle.active .bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
+  .scroll-indicator {
+    bottom: 16px; /* More space above About section */
+  }
+  .hero-buttons {
+    margin-bottom: 20px;
+  }
 
   .hero-content {
     grid-template-columns: 1fr;
