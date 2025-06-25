@@ -8,6 +8,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #ffffff;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -1176,6 +1179,39 @@ section {
   section {
     padding: 60px 0;
   }
+
+  .contact {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1217,7 +1253,21 @@ section {
     padding: 20px;
   }
 
+  .contact-content {
+    padding: 0 2px;
+  }
+  .contact-item {
+    /* width: 100%; */
+    /* margin-right: 4px; */
+    box-sizing: border-box;
+  }
+
   .contact-form {
-    padding: 25px;
+    padding: 8px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 15px;
   }
 }
