@@ -157,7 +157,10 @@ function initContactForm() {
           "Message sent successfully! I'll get back to you soon.",
           "success"
         );
-      }, 1000);
+      }, 2000);
+
+      submitButton.textContent = originalText;
+      submitButton.disabled = false;
     });
   }
 }
